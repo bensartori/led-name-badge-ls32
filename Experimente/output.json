@@ -1,0 +1,329 @@
+{
+  '/org/bluez': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.AgentManager1': {},
+    'org.bluez.ProfileManager1': {}
+  },
+  '/org/bluez/hci0': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.Adapter1': {
+      'Address': '5C:F3:70:6E:54:08',
+      'AddressType': 'public',
+      'Name': 'Nebulus',
+      'Alias': 'Nebulus',
+      'Class': 7078148,
+      'Powered': True,
+      'PowerState': 'on',
+      'Discoverable': True,
+      'DiscoverableTimeout': 0,
+      'Pairable': True,
+      'PairableTimeout': 0,
+      'Discovering': False,
+      'UUIDs': [
+        '0000110e-0000-1000-8000-00805f9b34fb',
+        '0000111f-0000-1000-8000-00805f9b34fb',
+        '00001200-0000-1000-8000-00805f9b34fb',
+        '0000110b-0000-1000-8000-00805f9b34fb',
+        '00001108-0000-1000-8000-00805f9b34fb',
+        '0000110c-0000-1000-8000-00805f9b34fb',
+        '00001800-0000-1000-8000-00805f9b34fb',
+        '0000110a-0000-1000-8000-00805f9b34fb',
+        '00001801-0000-1000-8000-00805f9b34fb',
+        '0000180a-0000-1000-8000-00805f9b34fb'
+      ],
+      'Modalias': 'usb:v1D6Bp0246d054C',
+      'Roles': [
+        'central',
+        'peripheral'
+      ],
+      'Manufacturer': 15,
+      'Version': 6
+    },
+    'org.freedesktop.DBus.Properties': {},
+    'org.bluez.BatteryProviderManager1': {},
+    'org.bluez.GattManager1': {},
+    'org.bluez.Media1': {
+      'SupportedUUIDs': [
+        '0000110a-0000-1000-8000-00805f9b34fb',
+        '0000110b-0000-1000-8000-00805f9b34fb'
+      ]
+    },
+    'org.bluez.NetworkServer1': {},
+    'org.bluez.LEAdvertisingManager1': {
+      'ActiveInstances': 0,
+      'SupportedInstances': 5,
+      'SupportedIncludes': [
+        'tx-power',
+        'appearance',
+        'local-name'
+      ]
+    }
+  },
+
+
+
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.Device1': {
+      'Address': '54:14:A7:80:FA:59',
+      'AddressType': 'public',
+      'Name': '1234567890',
+      'Alias': '1234567890',
+      'Paired': True,
+      'Bonded': True,
+      'Trusted': True,
+      'Blocked': False,
+      'LegacyPairing': False,
+      'Connected': False,
+      'UUIDs': [
+        '00001800-0000-1000-8000-00805f9b34fb',
+        '00001801-0000-1000-8000-00805f9b34fb',
+        '0000180a-0000-1000-8000-00805f9b34fb',
+        '0000fee0-0000-1000-8000-00805f9b34fb'
+      ],
+      'Modalias': 'bluetooth:v07D7p0000d0110',
+      'Adapter': '/org/bluez/hci0',
+      'ServicesResolved': False
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattService1': {
+      'Handle': 33,
+      'UUID': '0000fee0-0000-1000-8000-00805f9b34fb',
+      'Device': '/org/bluez/hci0/dev_54_14_A7_80_FA_59',
+      'Primary': True,
+      'Includes': []
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021/char0022': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 34,
+      'UUID': '0000fee1-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021',
+      'Value': bytearray(b
+      ''
+      ),
+      'Notifying': False,
+      'Flags': [
+        'read',
+        'write',
+        'notify'
+      ],
+      'NotifyAcquired': False
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021/char0022/desc0025': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattDescriptor1': {
+      'Handle': 4244,
+      'UUID': '00002901-0000-1000-8000-00805f9b34fb',
+      'Characteristic': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021/char0022',
+      'Value': bytearray(b
+      ''
+      )
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021/char0022/desc0024': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattDescriptor1': {
+      'Handle': 4244,
+      'UUID': '00002902-0000-1000-8000-00805f9b34fb',
+      'Characteristic': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service0021/char0022',
+      'Value': bytearray(b
+      ''
+      )
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattService1': {
+      'Handle': 14,
+      'UUID': '0000180a-0000-1000-8000-00805f9b34fb',
+      'Device': '/org/bluez/hci0/dev_54_14_A7_80_FA_59',
+      'Primary': True,
+      'Includes': []
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char001f': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 31,
+      'UUID': '00002a50-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      ''
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char001d': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 29,
+      'UUID': '00002a2a-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      '\xfe\x00experimental'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char001b': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 27,
+      'UUID': '00002a29-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      'Manufacturer Name'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char0019': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 25,
+      'UUID': '00002a28-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      'Software Revision'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char0017': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 23,
+      'UUID': '00002a27-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      'Hardware Revision'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char0015': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 21,
+      'UUID': '00002a26-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      'Firmware Revision'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char0013': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 19,
+      'UUID': '00002a25-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      'Serial Number'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char0011': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 17,
+      'UUID': '00002a24-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      'Model Number'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e/char000f': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 15,
+      'UUID': '00002a23-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000e',
+      'Value': bytearray(b
+      '\x00\x00\x00\x00\x00\x00\x00\x00'
+      ),
+      'Flags': [
+        'read'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000a': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattService1': {
+      'Handle': 10,
+      'UUID': '00001801-0000-1000-8000-00805f9b34fb',
+      'Device': '/org/bluez/hci0/dev_54_14_A7_80_FA_59',
+      'Primary': True,
+      'Includes': []
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000a/char000b': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattCharacteristic1': {
+      'Handle': 11,
+      'UUID': '00002a05-0000-1000-8000-00805f9b34fb',
+      'Service': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000a',
+      'Value': bytearray(b
+      ''
+      ),
+      'Notifying': False,
+      'Flags': [
+        'indicate'
+      ]
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+  '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000a/char000b/desc000d': {
+    'org.freedesktop.DBus.Introspectable': {},
+    'org.bluez.GattDescriptor1': {
+      'Handle': 4244,
+      'UUID': '00002902-0000-1000-8000-00805f9b34fb',
+      'Characteristic': '/org/bluez/hci0/dev_54_14_A7_80_FA_59/service000a/char000b',
+      'Value': bytearray(b
+      ''
+      )
+    },
+    'org.freedesktop.DBus.Properties': {}
+  },
+}

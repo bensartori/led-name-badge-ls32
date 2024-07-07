@@ -1,0 +1,163 @@
+Mode: Snow
+Flags: Marquee
+Text: Tachauch
+
+
+
+Bluetooth HCI ACL Packet
+  .... 0000 0000 0100 = Connection Handle: 0x004
+  ..00 .... .... .... = PB Flag: First Non-automatically Flushable Packet (0)
+  00.. .... .... .... = BC Flag: Point-To-Point (0)
+  Data Total Length: 23
+  [Source BD_ADDR: Sony_95:04:de (38:78:62:95:04:de)]
+  [Source Device Name: Xperia XZ2]
+  [Source Role: Unknown (0)]
+  [Destination BD_ADDR: NanjingQinhe_80:fa:59 (54:14:a7:80:fa:59)]
+  [Destination Device Name: LSLED]
+  [Destination Role: Unknown (0)]
+  [Current Mode: Unknown (-1)]
+
+Bluetooth L2CAP Protocol
+  Length: 19
+  CID: Attribute Protocol (0x0004)
+
+Bluetooth Attribute Protocol
+  Opcode: Write Request (0x12)
+    0... .... = Authentication Signature: False
+    .0.. .... = Command: False
+    ..01 0010 = Method: Write Request (0x12)
+  Handle: 0x0023 (Anhui Huami Information Technology Co., Ltd.: Anhui Huami Information Technology Co., Ltd.)
+  Values:
+
+Value: 77 61 6e 67 00 00 00 01 36 30 30 30 30 30 30 30
+Value: 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Value: 00 00 00 00 00 00 e8 07 02 08 2b 35 00 00 00 00
+Value: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Value: 00 7e 7e 5a 18 18 18 18 18 3c 00 00 00 00 00 78
+Value: 0c 7c cc cc 76 00 00 00 00 00 7c c6 c0 c0 c6 7c
+Value: 00 00 e0 60 60 6c 76 66 66 66 e6 00 00 00 00 00
+Value: 78 0c 7c cc cc 76 00 00 00 00 00 cc cc cc cc cc
+Value: 76 00 00 00 00 00 7c c6 c0 c0 c6 7c 00 00 e0 60
+Value: 60 6c 76 66 66 66 e6 00 00 00 00 00 00 00 00 00
+
+
+
+Similar buffer with our code:
+" ".join([hex(d)[2:].rjust(2, "0") for d in buf])
+Unsers: 77 61 6e 67 00 00 00 ff 36 36 36 36 36 36 36 36 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 18 07 03 08 21 09 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7e 7e 5a 18 18 18 18 18 3c 00 00 00 00 00 78 0c 7c cc cc 76 00 00 00 00 00 7c c6 c0 c0 c6 7c 00 00 e0 60 60 6c 76 66 66 66 e6 00 00 00 00 00 78 0c 7c cc cc 76 00 00 00 00 00 cc cc cc cc cc 76 00 00 00 00 00 7c c6 c0 c0 c6 7c 00 00 e0 60 60 6c 76 66 66 66 e6 00
+BT-App: 77 61 6e 67 00 00 00 01 36 30 30 30 30 30 30 30 00 08 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 e8 07 02 08 2b 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 7e 7e 5a 18 18 18 18 18 3c 00 00 00 00 00 78 0c 7c cc cc 76 00 00 00 00 00 7c c6 c0 c0 c6 7c 00 00 e0 60 60 6c 76 66 66 66 e6 00 00 00 00 00 78 0c 7c cc cc 76 00 00 00 00 00 cc cc cc cc cc 76 00 00 00 00 00 7c c6 c0 c0 c6 7c 00 00 e0 60 60 6c 76 66 66 66 e6 00 00 00 00 00 00 00 00 00
+
+Header: 77 61 6e 67 00 00 00 00 40 40 40 40 40 40 40 40 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+10:                                  |10                           |20                           |30                           |40                           |50                           |60
+                                                                                                                          +++++++++++++++++ Date YMDhms
+                                                        +++++++++++++++++++++++++++++++++++++++++++++++ Lengths in Blocks Hi/Lo
+                                +++++++++++++++++++++++ Speeds (high nibble) + modes (low nibble)
+                             ++ Ant Flags
+                          ++ Blink Flags
+                       ++ Brightness
+
+
+read:   uuid:2800 handles:0001-ffff (Primary Service)
+reply:  uuid:1800 handles:0001-0009 (Generic Access), uuid:1801 handles:000a-000d (Generic Attribute)
+
+read:   2800:000e-ffff (Primary Service)
+reply:  180a:000e-0020 (Device Information), fee0:0021-ffff (Anhui Huami Information Technology Co., Ltd.)
+
+read:   2802:0001-0009 (Include)
+reply:  Error
+
+read:   2803:0001-0009 (Characteristic)
+reply:  2a00:handle:0002/value-handle:0003 (Device Name), 2a01:0004/0005 (Appearance), 2a04:0006/0007 (Peripheral Preferred Conection Parameters)
+
+read:   2803:0007-0089 (Characteristic)
+reply:  2aa6:0008/0009 (Central Address Resolution)
+
+read:   2803:0009-0009(Characteristic)
+reply:  Error
+
+read:   2802:000a-000d (Include)
+reply:  Error
+
+read:   2803:000a-000d (Characteristic)
+reply:  2a05:000b/000c (Service Changed)
+
+read:   2803:000c-000d (Characteristic)
+reply:  Error
+
+find:  000d-000d
+reply: 2902:000d (Client Characteristic Configuration)
+
+read:  2802:000e-0020 (Include)
+reply: Error
+
+read:  2803:000e-0020 (Characteristic)
+reply: 2a23:000f/0010 (System ID), 2a24:0011/0012 (Model Number String), 2a25:0013/0014 (Serial Number String)
+
+read:  2803:0014-0020 (Characteristic)
+reply: 2a26:0015/0016 (Firmware Revision String), 2a27:0017/0018 (Hardware Revision String), 2a28:0019/001a (Software Revision String)
+
+read:  2803:001a-0020 (Characteristic)
+reply: 2a29:001b/001c (Manufacturer Name String), 2a2a:001d/001e (IEEE 11073-20601 Regulatory Certification Data List),
+       2a50:001f/0020 (Pnp ID)
+
+read:  2803:0020-0020 (Characteristic)
+reply: Error
+
+read:  2802:0021-ffff (Include)
+reply: Error
+
+read:  2803:0021-ffff (Characteristic)
+reply: fee1:0022/0023 (Anhui)
+
+read:  2803:0023-ffff (Characteristic)
+reply: Error
+
+find:  0024-ffff
+reply: 2902:0024 (Client Characteristic Configuration), 2901:0025 (Client User Description)
+
+find:  0026-ffff
+reply: Error
+
+Jetzt kommen die Write-Requests auf Handle 0023 (Service fee0 / UUID fee1)
+
+
+
+
+
+Bleak client hat rausgefunden:
+characteristics = {dict: 11} {11: 00002a05-0000-1000-8000-00805f9b34fb (Handle: 11): Service Changed, 15: 00002a23-0000-1000-8000-00805f9b34fb (Handle: 15): System ID, 17: 00002a24-0000-1000-8000-00805f9b34fb (Handle: 17): Model Number String, 19: 00002a25-0000-1000-8000-00805f9b34fb (Handle: 19): Serial Number String, 21: 00002a26-0000-1000-8000-00805f9b34fb (Handle: 21): Firmware Revision String, 23: 00002a27-0000-1000-8000-00805f9b34fb (Handle: 23): Hardware Revision String, 25: 00002a28-0000-1000-8000-00805f9b34fb (Handle: 25): Software Revision String, 27: 00002a29-0000-1000-8000-00805f9b34fb (Handle: 27): Manufacturer Name String, 29: 00002a2a-0000-1000-8000-00805f9b34fb (Handle: 29): IEEE 11073-20601 Regulatory Cert. Data List, 31: 00002a50-0000-1000-8000-00805f9b34fb (Handle: 31): PnP ID, 34: 0000fee1-0000-1000-8000-00805f9b34fb (Handle: 34): Anhui Huami Information Technology Co.}
+ 11 = {BleakGATTCharacteristicBlueZDBus} 00002a05-0000-1000-8000-00805f9b34fb (Handle: 11): Service Changed
+ 27 = {BleakGATTCharacteristicBlueZDBus} 00002a29-0000-1000-8000-00805f9b34fb (Handle: 27): Manufacturer Name String
+ 31 = {BleakGATTCharacteristicBlueZDBus} 00002a50-0000-1000-8000-00805f9b34fb (Handle: 31): PnP ID
+ 21 = {BleakGATTCharacteristicBlueZDBus} 00002a26-0000-1000-8000-00805f9b34fb (Handle: 21): Firmware Revision String
+ 23 = {BleakGATTCharacteristicBlueZDBus} 00002a27-0000-1000-8000-00805f9b34fb (Handle: 23): Hardware Revision String
+ 25 = {BleakGATTCharacteristicBlueZDBus} 00002a28-0000-1000-8000-00805f9b34fb (Handle: 25): Software Revision String
+ 19 = {BleakGATTCharacteristicBlueZDBus} 00002a25-0000-1000-8000-00805f9b34fb (Handle: 19): Serial Number String
+ 17 = {BleakGATTCharacteristicBlueZDBus} 00002a24-0000-1000-8000-00805f9b34fb (Handle: 17): Model Number String
+ 15 = {BleakGATTCharacteristicBlueZDBus} 00002a23-0000-1000-8000-00805f9b34fb (Handle: 15): System ID
+ 29 = {BleakGATTCharacteristicBlueZDBus} 00002a2a-0000-1000-8000-00805f9b34fb (Handle: 29): IEEE 11073-20601 Regulatory Cert. Data List
+ 34 = {BleakGATTCharacteristicBlueZDBus} 0000fee1-0000-1000-8000-00805f9b34fb (Handle: 34): Anhui Huami Information Technology Co.
+ __len__ = {int} 11
+descriptors = {dict: 3} {13: 00002902-0000-1000-8000-00805f9b34fb (Handle: 13): Client Characteristic Configuration, 36: 00002902-0000-1000-8000-00805f9b34fb (Handle: 36): Client Characteristic Configuration, 37: 00002901-0000-1000-8000-00805f9b34fb (Handle: 37): Characteristic User Description}
+ 13 = {BleakGATTDescriptorBlueZDBus} 00002902-0000-1000-8000-00805f9b34fb (Handle: 13): Client Characteristic Configuration
+ 37 = {BleakGATTDescriptorBlueZDBus} 00002901-0000-1000-8000-00805f9b34fb (Handle: 37): Characteristic User Description
+ 36 = {BleakGATTDescriptorBlueZDBus} 00002902-0000-1000-8000-00805f9b34fb (Handle: 36): Client Characteristic Configuration
+ __len__ = {int} 3
+services = {dict: 3} {10: 00001801-0000-1000-8000-00805f9b34fb (Handle: 10): Generic Attribute Profile, 14: 0000180a-0000-1000-8000-00805f9b34fb (Handle: 14): Device Information, 33: 0000fee0-0000-1000-8000-00805f9b34fb (Handle: 33): Anhui Huami Information Technology Co.}
+ 10 = {BleakGATTServiceBlueZDBus} 00001801-0000-1000-8000-00805f9b34fb (Handle: 10): Generic Attribute Profile
+ 14 = {BleakGATTServiceBlueZDBus} 0000180a-0000-1000-8000-00805f9b34fb (Handle: 14): Device Information
+ 33 = {BleakGATTServiceBlueZDBus} 0000fee0-0000-1000-8000-00805f9b34fb (Handle: 33): Anhui Huami Information Technology Co.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
