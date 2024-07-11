@@ -46,6 +46,7 @@ async def main(address):
         #for s in client.services:
         #    print(f'{s.uuid}: {s.description} {s.characteristics}')
         print(f"Connected: {client}")
+
         for k, v in ALL.items():
             value = await client.read_gatt_char(v)
             print(f"{k} ({v}): {"".join(map(chr, value))} ({" ".join(map(hex, value))})")
